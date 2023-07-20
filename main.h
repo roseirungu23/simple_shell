@@ -23,5 +23,6 @@ int main(int argc, char *argv);
 void free_tokens(char **args);
 char *tokenize(char *str);
 char *location(const char *cmd);
-int exec(char *argv, char **av);
+int exec(char *argv, char **av);
+
 #endif
