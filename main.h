@@ -17,9 +17,21 @@ extern char **environ;
 void display_prompt(void);
 int bettyStyle(int m, int n);
 void print_env(void);
+<<<<<<< HEAD
 int main(int argc, char **argv);
+=======
+int main(int argc, char *argv);
+void free_tokens(char **args);
+char *tokenize(char *str);
+char *location(const char *cmd);
+int exec(char *argv, char **av);
+
+=======
+int main(int argc, char **argv, char **envp);
+>>>>>>> 72f4f2f021b4865465ca68a77825fa2507a2fc62
 void tokens(char **args);
 char **tokenize(char *str);
 char *path(const char *cmd);
 int exec(char *argv, char **av);
+
 #endif
