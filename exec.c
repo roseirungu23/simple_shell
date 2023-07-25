@@ -8,7 +8,7 @@
  */
 int exec(char *argv, char **av)
 {
-char *cmd_path; 
+char *cmd_path;
 char *cmd;
 pid_t pid;
 int status;

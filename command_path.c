@@ -1,5 +1,4 @@
 #include "main.h"
-#define DELIMETER ";"
 
 /**
  * path - The FULL path of a command.
@@ -28,7 +27,6 @@ if (!path_env)
 return (NULL);
 }
 path = strdup(path_env);
-
 token = strtok(path, DELIMETER);
 
 while (token)
