@@ -8,7 +8,7 @@ char *custom_getline(void)
 	static char buffer[BUFF_SIZE];
 	static int pos, length;
 	char *line = NULL, *input;
-	int line_len = 0;
+	int linelen = 0;
 
 	if (pos >= length)
 	{
@@ -27,9 +27,9 @@ char *custom_getline(void)
 	}
 	while (pos < length && buffer[pos] != '\n')
 	{
-		line[line_len++] = buffer[pos++];
+		line[linelen++] = buffer[pos++];
 	}
-	line[line_len] = '\0';
+	line[linelen] = '\0';
 	if (pos < length && buffer[pos] == '\n')
 	{
 		pos++;
@@ -39,7 +39,6 @@ char *custom_getline(void)
 	{
 		if (strcmp(input, "quit") == 0)
 		{
-			free(input);
 			break;
 		}
 		printf("You entered: %s\n", input);
