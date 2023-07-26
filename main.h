@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+#define DELIMETER " \n\t\r"
 
 #include <stdio.h>
 #include <stdlib.h>
