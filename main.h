@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <stdbool.h>
+
 #define BUFF_SIZE 1024
 
 extern char **environ;
@@ -22,6 +22,5 @@ int exec(char *argv, char **av);
 void tokens(char **args);
 char **tokenize(char *str);
 char *path(const char *cmd);
-bool is_integer(const char *str);
 
 #endif
