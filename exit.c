@@ -57,7 +57,7 @@ char *get_full_path(const char *cmd)
 	char *token, *path = strdup(path_env);
 	int len;
 	char *full_path;
-	
+
 	if (!path)
 		return (NULL);
 	if (!path_env)
