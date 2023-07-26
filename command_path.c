@@ -27,7 +27,6 @@ if (!path_env)
 return (NULL);
 }
 path = strdup(path_env);
-
 token = strtok(path, DELIMETER);
 
 while (token)
