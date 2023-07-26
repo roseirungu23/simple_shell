@@ -28,7 +28,7 @@ else
 cmd_path = cmd;
 if (!cmd_path)
 {
-fprintf(stderr, "%s: not found\n", argv, cmd);
+fprintf(stderr, "%s\n", argv, cmd);
 return (0);
 }
 pid = fork();
