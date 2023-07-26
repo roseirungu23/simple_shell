@@ -1,4 +1,6 @@
 #include "main.h"
+#include "command_path.c"
+#include "main.c"
 /**
 * exit_status - exits shell with an integer
 * Return: Always 0(Success).
@@ -45,41 +47,4 @@ int exit_status(void)
 		len = 0;
 	}
 	return (0);
-}
-/**
- * get_full_path - full path of a command
- * @cmd: the ommand
- * Return: pointer
- */
-char *get_full_path(const char *cmd)
-{
-	char *path_env = getenv("PATH");
-	char *token, *path = strdup(path_env);
-	int len;
-	char *full_path;
-
-	if (!path)
-		return (NULL);
-	if (!path_env)
-		return (NULL);
-	while (token)
-	{
-		full_path = malloc(len);
-		len = strlen(token) + strlen(cmd) + 2;
-		if (!full_path)
-		{
-			free(path);
-			return (NULL);
-		}
-		printf(full_path, len, "%s/%s", token, cmd);
-		if (access(full_path, F_OK) == 0)
-		{
-			free(path);
-			return (full_path);
-		}
-		free(full_path);
-		token = strtok(NULL, DELIMETER);
-	}
-	free(path);
-	return (NULL);
 }
