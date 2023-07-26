@@ -33,12 +33,12 @@ return (0);
 }
 pid = fork();
 if (pid == -1)
-perror("Error");
+perror("Error ");
 else if (pid == 0)
 {
 if (execve(cmd_path, av, NULL) == -1)
 {
-perror("Error");
+perror("Error ");
 exit(0);
 }
 }
