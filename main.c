@@ -1,3 +1,4 @@
+#define DELIMETER " \n\t\r"
 #include "main.h"
 
 /**

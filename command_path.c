@@ -1,4 +1,5 @@
 #include "main.h"
+#define DELIMETER ","
 
 /**
  * path - The FULL path of a command.
